@@ -13,6 +13,14 @@ public class ExampleTest {
         ValidateIsbn validator = new ValidateIsbn();
         boolean result =  validator.checkISBN(984782850);
         assertTrue(result);
+        result = validator.checkISBN(1849967202);
+        assertTrue(result);
+    }
+    @Test
+    public void checkInvalidISBN() {
+        ValidateIsbn validator = new ValidateIsbn();
+        boolean result =  validator.checkISBN(984782857);
+        assertFalse(result);
     }
 
 
