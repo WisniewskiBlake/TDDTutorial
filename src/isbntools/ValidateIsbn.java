@@ -12,7 +12,7 @@ public class ValidateIsbn {
             return true;
         }
         else {
-
+            return false;
         }
     }
 
