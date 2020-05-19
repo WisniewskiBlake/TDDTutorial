@@ -23,5 +23,13 @@ public class ExampleTest {
         assertFalse(result);
     }
 
+    @Test
+    public void nineDigitIsNotAllowed() {
+        ValidateIsbn validator = new ValidateIsbn();
+        assertThrows(NumberFormatException.class, () -> {
+            validator.checkISBN("123456789");
+        });
+    }
+
 
 }
