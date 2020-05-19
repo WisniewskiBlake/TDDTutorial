@@ -2,8 +2,8 @@ package isbntools;
 
 public class ValidateIsbn {
 
-    public boolean checkISBN(int isbn) {
-        if(isbn == 984782850) {
+    public boolean checkISBN(String isbn) {
+        if(isbn == "0984782850") {
             return true;
         }
         else{
