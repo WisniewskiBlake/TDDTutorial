@@ -9,14 +9,14 @@ public class ValidateIsbn {
         int total = 0;
         for (int i = 0; i < 10; i++) {
             if(!Character.isDigit(isbn.charAt(i))) {
-                if() {
+                if(i == 9 && isbn.charAt(i) == 'X') {
 
                 }
                 else {
-
+                    throw new NumberFormatException("ISBN can only contain numeric digits");
                 }
             }
-                throw new NumberFormatException("ISBN can only contain numeric digits");
+
             total += isbn.charAt(i) * (10 - i);
         }
         if(total % 11 == 0) {
